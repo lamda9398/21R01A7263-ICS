@@ -1,0 +1,5 @@
+openssl rsa -pubin -inform PEM -text -noout <pubkey.pem
+
+python exploit.py
+
+openssl pkeyutl -decrypt -in enc.txt -out decrypt.txt -inkey private.pem
